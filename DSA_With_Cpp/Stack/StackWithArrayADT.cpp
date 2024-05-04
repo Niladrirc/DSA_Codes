@@ -58,10 +58,10 @@ int pop(Stack *stk) {
 }
 
 int peek(Stack *stk, int pos) {
-    if (stk->top - pos + 1 < 0)
+    if (stk->top - pos + 1 < 0) {
         cout << "Invalid Postition sought" << endl;
         return -1;
-    else
+    } else
         return stk->arr[stk->top - pos + 1];
 }
 
