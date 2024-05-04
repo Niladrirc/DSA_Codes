@@ -57,6 +57,21 @@ int pop(Stack *stk) {
     return x;
 }
 
+int peek(Stack *stk, int pos) {
+    if (stk->top - pos + 1 < 0)
+        cout << "Invalid Postition sought" << endl;
+        return -1;
+    else
+        return stk->arr[stk->top - pos + 1];
+}
+
+int stackTop(Stack *stk) {
+    if (isEmpty(stk))
+        return -1;
+    else
+        return stk->arr[stk->top];
+}
+
 int main(int argc, const char * argv[]) {
     
     Stack *stk = new Stack;
