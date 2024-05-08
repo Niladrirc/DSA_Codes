@@ -16,13 +16,18 @@ public class GCDByEuclideanAlgorithm {
         System.out.println("The GCD of " + n1 + " and "+ n2 + " is: "+findGCD(n1, n2));
     }
 
-    private static int findGCD(int n1, int n2) {
-        while (n1!=0 && n2!=0) {
-            if (n1 > n2)
-                n1 = n1-n2;
-            else
-                n2 = n2-n1;
+    private static int findGCD(int n, int m) {
+        int max = Math.max(n, m);
+        int min = Math.min(n, m);
+
+        while (true) {
+            int rem = max%min;
+            if (rem == 0)
+                return min;
+            else {
+                max = min;
+                min = rem;
+            }
         }
-        return n1 == 0 ? n2:n1;
     }
 }
