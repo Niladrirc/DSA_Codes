@@ -16,11 +16,11 @@ public static void main(String[] args) {
         System.out.println("The GCD of " + n1 + " and "+ n2 + " is: "+findGCD(n1, n2));
         }
 
-    private static int findGCD(int n1, int n2) {
-        int min = Math.min(n1, n2);
+    private static int findGCD(int n, int m) {
+        int min = Math.min(n, m);
         int gcd = 1;
         for (int i=1; i<=min/2; i++) {
-            gcd = (n1%i == 0 && n2%i == 0)?i:gcd;
+            gcd = (n%i == 0 && m%i == 0)?i:gcd;
         }
         return gcd;
     }
