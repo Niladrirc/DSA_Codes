@@ -22,9 +22,7 @@ public class LeftRightDifference {
         }
 
         for (int i=0; i<nums.length; i++) {
-            if (i==0)
-                leftSum = 0;
-            else
+            if (i!=0)
                 leftSum += nums[i-1];
             rightSum = arrSum - nums[i];
             arrSum -= nums[i];
