@@ -72,6 +72,10 @@ int evaluate(char *exp) {
     int i = 0;
     Stack stk((int) strlen(exp) + 1);
     while (exp[i] != '\0') {
+        if (isblank(exp[i])) {
+            i++;
+            continue;
+        }
         if (isdigit(exp[i])) {
             stk.push(exp[i++] - '0');
         } else {
@@ -111,7 +115,7 @@ int evaluate(char *exp) {
 }
 
 int main(int argc, const char * argv[]) {
-    char *exp = (char *) "35*62/+4-";
+    char *exp = (char *) "8 2 3 ^ / 2 3* + 5 1*-";
     try {
         int result = evaluate(exp);
         cout << "The result of the expression is: " << result << endl;
