@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "3ACDEA9E-61CE-4A99-9F2E-AF37DD2BB405"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7250E2EF-21CA-4D0D-A889-DFD60DA99596"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QueueUsingArray/main.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "main(argc, argv)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "7250E2EF-21CA-4D0D-A889-DFD60DA99596 - 3a589dca2295aaa5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "QueueUsingArray"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/niladri.choudhury/Repositories/personal/DSA_Codes/DSA_With_Cpp/QueueUsingArray/QueueUsingArray/main.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "115">
+               </Location>
+               <Location
+                  uuid = "7250E2EF-21CA-4D0D-A889-DFD60DA99596 - 3a589dca2295aaa5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "QueueUsingArray"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/niladri.choudhury/Repositories/personal/DSA_Codes/DSA_With_Cpp/QueueUsingArray/QueueUsingArray/main.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "106">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
