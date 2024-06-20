@@ -25,6 +25,9 @@
 /* Begin PBXFileReference section */
 		B36FCA622C2019740026096C /* TreeBasic */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TreeBasic; sourceTree = BUILT_PRODUCTS_DIR; };
 		B36FCA652C2019740026096C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		B3B950272C2460410036565C /* TreeNodeCpp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TreeNodeCpp.h; sourceTree = "<group>"; };
+		B3B950282C2460890036565C /* QueueNodeCpp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QueueNodeCpp.h; sourceTree = "<group>"; };
+		B3B950292C2461910036565C /* Queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				B36FCA652C2019740026096C /* main.cpp */,
+				B3B950272C2460410036565C /* TreeNodeCpp.h */,
+				B3B950282C2460890036565C /* QueueNodeCpp.h */,
+				B3B950292C2461910036565C /* Queue.h */,
 			);
 			path = TreeBasic;
 			sourceTree = "<group>";

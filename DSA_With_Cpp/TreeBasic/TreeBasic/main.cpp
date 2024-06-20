@@ -6,82 +6,12 @@
 //
 
 #include <iostream>
+#include <stdio.h>
+#include "TreeNodeCpp.h"
+#include "QueueNodeCpp.h"
+#include "Queue.h"
 
 using namespace std;
-
-class TreeNode {
-public:
-    TreeNode *left;
-    int data;
-    TreeNode *right;
-    
-    TreeNode(int value): data(value), left(nullptr), right(nullptr) {}
-};
-
-class QueueNode {
-public:
-    QueueNode *next;
-    TreeNode *data;
-    
-    QueueNode(TreeNode *address): data(address), next(nullptr) {
-};
-
-class Queue {
-private:
-    QueueNode *front;
-    QueueNode *rear;
-public:
-    
-    Queue() {
-        front = rear = nullptr;
-    }
-    bool isEmpty() {
-        return front == nullptr;
-    }
-    
-    void enqueue(TreeNode *address) {
-        QueueNode *temp = new QueueNode(address);
-        
-        if (temp == NULL) {
-            cout << "Queue is full !!" << endl;
-            return;
-        }
-        
-        if (isEmpty()) {
-            front = rear = temp;
-        } else {
-            rear->next = temp;
-            rear = temp;
-        }
-    }
-    
-    TreeNode * dequeue() {
-        if (isEmpty()) {
-            cout << "Queue is empty.." << endl;
-            return nullptr;
-        }
-        
-        TreeNode *temp = front->data;
-        QueueNode *oldFront = front;
-        front = front->next;
-        delete oldFront;
-        return temp;
-    }
-    
-    void display() {
-        if (isEmpty()) {
-            cout << "Queue is empty.." << endl;
-            return;
-        }
-        
-        QueueNode *temp = front;
-        cout << "Elements of the queue are: " << endl;
-        while (temp != nullptr) {
-            cout << "Address: " << temp->data << " | Value: " << temp->data->data << endl;
-            temp = temp->next;
-        }
-    }
-};
 
 
 class Tree {
@@ -129,9 +59,7 @@ public:
 };
 
 int main(int argc, const char * argv[]) {
-    
     Tree tree;
     tree.create();
-    
     return 0;
-};
+}
