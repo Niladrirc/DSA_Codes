@@ -18,6 +18,7 @@ private:
     TreeNode *data;
     
 public:
+    Queue(): front(nullptr), rear(nullptr), data(nullptr) {}
     bool isEmpty() {
         return front == nullptr;
     }
@@ -27,7 +28,10 @@ public:
         if (temp == nullptr) {
             cout << "Queue/Heap is Full..." << endl;
             return;
-        } else {
+        } else if (isEmpty()) {
+            front = rear = temp;
+        }
+        else {
             rear->next = temp;
             rear = temp;
         }
