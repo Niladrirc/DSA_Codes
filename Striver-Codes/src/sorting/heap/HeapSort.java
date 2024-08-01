@@ -3,6 +3,7 @@ package sorting.heap;
 import sorting.Sort;
 import sorting.SortingOrder;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
@@ -18,9 +19,7 @@ public class HeapSort extends Sort {
 
         if (order == SortingOrder.ASC) {
             System.out.println("Using Max Heap to sort the array in ascending order");
-            for (int i=1; i<arr.length; i++) {
-                insertMaxHeap(arr, i);
-            }
+            maxHeapify(arr);
             for (int i=arr.length-1; i>0; i--) {
                 deleteFromMaxHeap(arr, i);
             }
@@ -33,7 +32,7 @@ public class HeapSort extends Sort {
                 deleteFromMinHeap(arr, i);
             }
         }
-        return arr;
+        return Arrays.copyOfRange(arr, 1, arr.length);
     }
 
     @Override
@@ -80,7 +79,7 @@ public class HeapSort extends Sort {
         Integer x = a[1];
         a[1] = a[n];
         int i = 1, j=2*i;
-        while (j < n-1) {
+        while (j <= n-1) {
             if (a[j+1] > a[j])
                 j++;
             if (a[j] > a[i]) {
@@ -112,5 +111,23 @@ public class HeapSort extends Sort {
                 break;
         }
         a[n] = x;
+    }
+
+    private void maxHeapify(Integer[] arr) {
+        int l = arr.length-1;
+        for (int a=l; a>=1; a--) {
+            int i = a;
+            while ((2*i) < l) {
+                int j = 2 * i;
+                if (arr[j] < arr[j + 1])
+                    j = j + 1;
+                if (arr[i] < arr[j]) {
+                    Integer temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                    i = j;
+                }
+            }
+        }
     }
 }
